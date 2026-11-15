@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PC HARD - Armado, venta y mantenimiento de PCs</title>
+
+  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+  <!--  BARRA DE NAVEGACIÓN (navbar de Bootstrap)  -->
+  <nav class="navbar navbar-expand-lg sticky-top barra" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand marca" href="#inicio">PC <span>HARD</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#preguntas">Preguntas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Tienda</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-pchard btn-sm" href="acceso.html#registro">Registrate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  PORTADA (hero)  -->
+  <header id="inicio" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6 text-center text-lg-start">
+          <span class="badge etiqueta mb-3">Armado · Venta · Mantenimiento</span>
+          <h1 class="display-4 fw-bold">Reanimamos <span class="texto-acento">tu equipo</span></h1>
+          <p class="lead mt-3">
+            Armamos tu PC a medida, vendemos equipos y componentes, y le damos mantenimiento
+            a tu computadora para que vuelva a funcionar como nueva.
+          </p>
+          <div class="mt-4">
+            <a href="#contacto" class="btn btn-pchard btn-lg me-2 mb-2">Pedí tu presupuesto</a>
+            <a href="index.html" class="btn btn-outline-pchard btn-lg mb-2">Ver la tienda</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center mt-5 mt-lg-0">
+          <img src="img/Logotipo PC HARD en cian y blanco.png" alt="Logo PC HARD" class="img-fluid logo-hero">
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!--  SERVICIOS (grilla + cards de Bootstrap)  -->
+    <section id="servicios" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold">Nuestros <span class="texto-acento">servicios</span></h2>
+        <p class="text-center subtitulo mb-5">Todo lo que necesitás para tu computadora en un solo lugar</p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <i class="fas fa-microchip icono mb-3"></i>
+                <h5 class="card-title fw-bold">Armado de PCs</h5>
+                <p class="card-text">
+                  Elegimos los componentes con vos según tu presupuesto y lo que necesites:
+                  juegos, estudio o trabajo. Te la dejamos armada y funcionando.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <i class="fas fa-cart-shopping icono mb-3"></i>
+                <h5 class="card-title fw-bold">Venta</h5>
+                <p class="card-text">
+                  PCs nuevas y usadas, y componentes sueltos: placas de video, procesadores,
+                  memorias RAM, discos y periféricos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <i class="fas fa-screwdriver-wrench icono mb-3"></i>
+                <h5 class="card-title fw-bold">Mantenimiento</h5>
+                <p class="card-text">
+                  Limpieza interna, cambio de pasta térmica, formateo e instalación de programas.
+                  Reparamos tu equipo para que vuelva a andar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  PRODUCTOS DESTACADOS  -->
+    <section id="productos" class="py-5 fondo-alterno">
+      <div class="container">
+        <h2 class="text-center fw-bold">Productos <span class="texto-acento">destacados</span></h2>
+        <p class="text-center subtitulo mb-5">Algunos de los componentes que tenemos disponibles</p>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="img/images.jpg" class="card-img-top producto-img" alt="RTX 3060 Ti">
+              <div class="card-body">
+                <h6 class="card-title">Placa de Video Zotac Gaming GeForce RTX 3060 Ti 8GB</h6>
+                <p class="precio mb-0">$ 450.000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="img/procesador-amd-ryzen-5-5500-4-20ghz-6-nucleos-19mb-8211-socket-am4-con-cooler-845661.webp" class="card-img-top producto-img" alt="Ryzen 5 5500">
+              <div class="card-body">
+                <h6 class="card-title">Procesador AMD Ryzen 5 5500</h6>
+                <p class="precio mb-0">$ 180.000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="img/1649876696_1626978698_cp-kingston-kf426c16bb8-3.jpg" class="card-img-top producto-img" alt="Memoria RAM Kingston">
+              <div class="card-body">
+                <h6 class="card-title">Memoria RAM Kingston FURY Beast 16GB (2x8GB) 3200MHz DDR4</h6>
+                <p class="precio mb-0">$ 65.000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="img/images (3).jpg" class="card-img-top producto-img" alt="SSD M.2 NVMe">
+              <div class="card-body">
+                <h6 class="card-title">Disco Sólido SSD M.2 NVMe 1TB Kingston NV2 PCIe 4.0</h6>
+                <p class="precio mb-0">$ 82.000</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html" class="btn btn-outline-pchard btn-lg">Ver todos los productos</a>
+        </div>
+      </div>
+    </section>
+
+    <!--  PREGUNTAS FRECUENTES (acordion de Bootstrap)  -->
+    <section id="preguntas" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold">Preguntas <span class="texto-acento">frecuentes</span></h2>
+        <p class="text-center subtitulo mb-5">Las dudas que más nos hacen</p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faq">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    ¿Arman PCs a medida?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                  <div class="accordion-body">
+                    Sí. Nos decís tu presupuesto y para qué la vas a usar, y armamos la configuración
+                    que mejor se adapte.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    ¿Venden equipos usados?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">
+                    Sí, trabajamos con PCs nuevas y usadas, y también con componentes sueltos.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    ¿Qué incluye el mantenimiento?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">
+                    Limpieza interna, cambio de pasta térmica, revisión de temperaturas y, si hace
+                    falta, formateo e instalación de programas.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    ¿Cómo hago una consulta?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">
+                    Completá el formulario de contacto o llamanos al número que figura en esta página.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  CONTACTO (formulario con validación de Bootstrap)  -->
+    <section id="contacto" class="py-5 fondo-alterno">
+      <div class="container">
+        <h2 class="text-center fw-bold">Contactanos</h2>
+        <p class="text-center subtitulo mb-5">Contanos qué necesitás y te pasamos un presupuesto</p>
+
+        <div class="row g-5">
+
+          <!-- Datos de contacto -->
+          <div class="col-lg-5">
+            <ul class="list-unstyled contacto-lista">
+              <li class="mb-3">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+5493804534838">+549 380 4534838</a>
+              </li>
+              <li class="mb-3">
+                <i class="fab fa-instagram"></i> @pc.hard
+              </li>
+              <li class="mb-3">
+                <i class="fab fa-facebook"></i> PC Hard
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-location-dot"></i> La Rioja, Argentina
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulario -->
+          <div class="col-lg-7">
+            <form id="form-contacto" action="#" method="post" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre y apellido</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
+                  <div class="invalid-feedback">Ingresá tu nombre.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="servicio" class="form-label">¿Qué necesitás?</label>
+                  <select class="form-select" id="servicio" name="servicio" required>
+                    <option value="" selected disabled>Elegí una opción</option>
+                    <option>Armado de PC</option>
+                    <option>Compra de equipo o componentes</option>
+                    <option>Mantenimiento o reparación</option>
+                    <option>Otra consulta</option>
+                  </select>
+                  <div class="invalid-feedback">Elegí una opción.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                  <div class="invalid-feedback">Escribí tu consulta.</div>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-pchard btn-lg w-100">Enviar consulta</button>
+                </div>
+              </div>
+
+              <div id="aviso" class="alert alert-info mt-3 d-none" role="status">
+                Formulario OK.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--  PIE DE PÁGINA  -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="marca mb-1">PC <span>HARD</span></p>
+      <p class="subtitulo mb-3">Reanimamos tu equipo</p>
+      <p class="legal mb-0">&copy; 2026 PC HARD. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript de Bootstrap  -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Validación del formulario de contacto
+    var formulario = document.getElementById('form-contacto');
+    var aviso = document.getElementById('aviso');
+
+    formulario.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!formulario.checkValidity()) {
+        formulario.classList.add('was-validated'); // Bootstrap marca los campos con error
+        aviso.classList.add('d-none');
+        return;
+      }
+
+      aviso.classList.remove('d-none');
+      formulario.reset();
+      formulario.classList.remove('was-validated');
+    });
+  </script>
+</body>
+</html>

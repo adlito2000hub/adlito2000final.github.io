@@ -1,0 +1,177 @@
+
+:root {
+  --bg: #0b1220;
+  --card: #111b30;
+  --line: #1f2d4a;
+  --text: #e8eef9;
+  --muted: #8fa0bd;
+  --accent: #00d1c1;
+  --neon: #39f5e0;
+
+  /* Hacemos que Bootstrap use nuestros colores */
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-body-font-family: 'Montserrat', system-ui, sans-serif;
+  --bs-border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+/* Para que la barra fija no tape los títulos al hacer clic en el menú */
+section, header {
+  scroll-margin-top: 70px;
+}
+
+.texto-acento { color: var(--neon); }
+.subtitulo { color: var(--muted); }
+
+/*  Barra de navegación  */
+.barra {
+  background: rgba(11, 18, 32, 0.95);
+  border-bottom: 1px solid var(--line);
+}
+
+.marca {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-decoration: none;
+}
+.marca span { color: var(--accent); }
+
+.barra .nav-link { color: var(--muted); font-weight: 600; font-size: 0.9rem; }
+.barra .nav-link:hover { color: var(--neon); }
+
+/*  Botones propios  */
+.btn-pchard {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04201e;
+  font-weight: 700;
+}
+.btn-pchard:hover {
+  background: var(--neon);
+  border-color: var(--neon);
+  color: #04201e;
+  box-shadow: 0 0 18px rgba(57, 245, 224, 0.45);
+}
+
+.btn-outline-pchard {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+  background: transparent;
+}
+.btn-outline-pchard:hover {
+  background: var(--accent);
+  color: #04201e;
+}
+
+/*  Portada  */
+.hero {
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(0, 209, 193, 0.18), transparent 50%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.etiqueta {
+  background: rgba(0, 209, 193, 0.15);
+  color: var(--neon);
+  border: 1px solid var(--accent);
+  font-weight: 600;
+  padding: 8px 14px;
+}
+
+.logo-hero {
+  max-height: 340px;
+  filter: drop-shadow(0 0 25px rgba(0, 209, 193, 0.35));
+}
+
+/*  Secciones  */
+.fondo-alterno {
+  background: #0e182b;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/*  Cards  */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 0 25px rgba(0, 209, 193, 0.15);
+}
+
+.icono {
+  font-size: 2.6rem;
+  color: var(--neon);
+}
+
+.producto-img {
+  background: #fff;
+  height: 200px;
+  object-fit: contain;
+  padding: 12px;
+  border-radius: 14px 14px 0 0;
+}
+
+.precio {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neon);
+}
+
+/*  Acordeón (preguntas frecuentes)  */
+.accordion {
+  --bs-accordion-bg: var(--card);
+  --bs-accordion-border-color: var(--line);
+  --bs-accordion-btn-bg: var(--card);
+  --bs-accordion-active-bg: var(--card);
+  --bs-accordion-active-color: var(--neon);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 3px rgba(0, 209, 193, 0.18);
+}
+.accordion-button { font-weight: 600; }
+
+/*  Formulario  */
+.form-control,
+.form-select {
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--bg);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 209, 193, 0.18);
+}
+.form-label { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+
+.contacto-lista li { font-size: 1.05rem; }
+.contacto-lista i { color: var(--accent); width: 28px; }
+.contacto-lista a { color: var(--text); text-decoration: none; }
+.contacto-lista a:hover { color: var(--neon); }
+
+/*  Footer  */
+footer {
+  background: #080e1a;
+  border-top: 1px solid var(--line);
+}
+footer .marca { font-size: 1.4rem; }
+footer .legal { color: #5c6b87; font-size: 0.75rem; }

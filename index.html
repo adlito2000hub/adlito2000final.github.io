@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC GAMER - Tienda</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabecera principal -->
+
+    <header>
+        <div class="logo">
+            <img src="img/Logotipo PC HARD en cian y blanco.png" alt="PC HARD Logo">
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="¿Qué estás buscando?">
+        </div>
+        <div class="usuario">
+            <a href="acceso.html#registro" class="boton-menu">Registrate</a>
+            <a href="acceso.html#login" class="boton-menu">Iniciá sesión</a>       
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul class="menu">
+            <li><a href="landing.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#" class="cyber">CyberMonday2026</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">PCs Armadas</a></li>
+            <li><a href="#">Armá tu PC</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Portada: carrusel de Bootstrap -->
+        <section id="inicio">
+            <div id="carruselPortada" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicadores (puntos inferiores) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Diapositivas -->
+                <div class="carousel-inner">
+
+                    <!-- Cyber Monday -->
+                    <div class="carousel-item active">
+                        <div class="slide-portada slide-cyber">
+                            <div class="slide-texto">
+                                <h2>CYBER MONDAY</h2>
+                                <p class="slide-grande">HASTA 35% OFF</p>
+                                <p class="slide-chip">12 CUOTAS SIN INTERÉS + ENVÍOS GRATIS</p>
+                            </div>
+                            <img src="img/images.jpg" alt="Placa de video RTX 3060 Ti">
+                        </div>
+                    </div>
+
+                    <!--  Armá tu PC -->
+                    <div class="carousel-item">
+                        <div class="slide-portada slide-armado">
+                            <div class="slide-texto">
+                                <h2>ARMÁ TU PC</h2>
+                                <p class="slide-grande">GAMER</p>
+                                <p class="slide-chip">ELEGÍ TUS COMPONENTES</p>
+                            </div>
+                            <img src="img/procesador-amd-ryzen-5-5500-4-20ghz-6-nucleos-19mb-8211-socket-am4-con-cooler-845661.webp" alt="Procesador AMD Ryzen 5 5500">
+                        </div>
+                    </div>
+
+                    <!--  Marca -->
+                    <div class="carousel-item">
+                        <div class="slide-portada slide-marca">
+                            <div class="slide-texto">
+                                <h2>PC HARD</h2>
+                                <p class="slide-grande">REANIMAMOS TU EQUIPO</p>
+                                <p class="slide-chip">ARMADO · VENTA · MANTENIMIENTO</p>
+                            </div>
+                            <img src="img/Logotipo PC HARD en cian y blanco.png" class="logo-slide" alt="PC HARD">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles anterior y siguiente -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselPortada" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselPortada" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Filtros rápidos -->
+        <section class="categorias">
+            <h3>Conocé nuestros productos destacados</h3>
+            <div class="botones-categorias">
+                <button>Notebooks</button>
+                <button>Placas de Video</button>
+                <button>Monitores</button>
+                <button>Procesadores</button>
+                <button>Refrigeración</button>
+            </div>
+        </section>
+
+        <!-- Grilla de Productos -->
+        <section class="productos-destacados">
+            <!-- Producto 1 -->
+            <article class="tarjeta-producto">
+                <img src="img/images.jpg" alt="RTX 3060 Ti">
+                <h4>Placa de Video Zotac Gaming GeForce RTX 3060 Ti 8GB</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 550.000</p>
+                    <p class="precio-nuevo">$ 450.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="tarjeta-producto">
+                <img src="img/procesador-amd-ryzen-5-5500-4-20ghz-6-nucleos-19mb-8211-socket-am4-con-cooler-845661.webp" alt="Ryzen 5 5500">
+                <h4>Procesador AMD Ryzen 5 5500</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 230.000</p>
+                    <p class="precio-nuevo">$ 180.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="tarjeta-producto">
+                <img src="img/images (1).jpg" alt="Monitor ASRock">
+                <h4>Monitor Gamer ASRock Challenger 24.5" 120Hz</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 290.000</p>
+                    <p class="precio-nuevo">$ 220.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="tarjeta-producto">
+                <img src="img/01-07-2025-01-07-21_amo2.jpeg" alt="Cooler Arctic">
+                <h4>Cooler CPU Arctic Freezer 36 Black</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 110.000</p>
+                    <p class="precio-nuevo">$ 85.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+            
+            <!-- Producto 5 -->
+            <article class="tarjeta-producto">
+                <img src="img/1649876696_1626978698_cp-kingston-kf426c16bb8-3.jpg" alt="Memoria RAM Kingston">
+                <h4>Memoria RAM Kingston FURY Beast 16GB (2x8GB) 3200MHz DDR4</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 85.000</p>
+                    <p class="precio-nuevo">$ 65.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+
+            <!-- Producto 6 -->
+            <article class="tarjeta-producto">
+                <img src="img/GC03345.jpg.webp" alt="Mouse Logitech G">
+                <h4>Mouse Gamer Logitech G Pro X Superlight Wireless Blanco</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 150.000</p>
+                    <p class="precio-nuevo">$ 125.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+            
+            <!-- Producto 7 -->
+            <article class="tarjeta-producto">
+                <img src="img/images (2).jpg" alt="Teclado AULA">
+                <h4>Teclado Mecánico AULA F75 Switch Yellow Hot-Swap RGB</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 95.000</p>
+                    <p class="precio-nuevo">$ 75.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+            
+            <!-- Producto 8 -->
+            <article class="tarjeta-producto">
+                <img src="img/images (3).jpg" alt="SSD M.2 NVMe">
+                <h4>Disco Solido SSD M.2 NVMe 1TB Kingston NV2 PCIe 4.0</h4>
+                <div class="precio-contenedor">
+                    <p class="precio-viejo">$ 105.000</p>
+                    <p class="precio-nuevo">$ 82.000</p>
+                </div>
+                <span class="badge">CYBER MONDAY</span>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-columnas">
+            <div class="columna">
+                <h4>Seguinos en</h4>
+                <div class="redes-sociales">
+                    <a href="#"><i class="fab fa-facebook"></i> PC Hard</a>
+                    <a href="#"><i class="fab fa-instagram"></i> @pc.hard</a>
+                </div>
+            </div>
+            <div class="columna menu-animado">
+                <h4>Productos</h4>
+                <ul>
+                    <li><a href="#">Armá tu PC</a></li>
+                    <li><a href="#">Notebooks</a></li>
+                    <li><a href="#">Placas de Video</a></li>
+                </ul>
+            </div>
+            <div class="columna menu-animado">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Garantía con la marca</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li class="telefono"><a href="tel:+5493804534838"><i class="fas fa-phone-alt"></i> +549 380 4534838</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 PC GAMER. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- JS de Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

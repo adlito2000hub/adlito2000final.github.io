@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso | PC HARD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Colores: cambiá acá si querés ajustarlos a tu página ===== */
+    :root {
+      --bg: #0b1220;
+      --card: #111b30;
+      --line: #1f2d4a;
+      --text: #e8eef9;
+      --muted: #8fa0bd;
+      --accent: #00d1c1;
+      --neon: #39f5e0;
+      --error: #ff5c7a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 0 40px rgba(0, 209, 193, 0.08);
+    }
+
+    .brand { text-align: center; margin-bottom: 24px; }
+    .brand h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: 1px; }
+    .brand h1 span { color: var(--accent); }
+    .brand p { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .tab {
+      flex: 1;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font: 600 0.95rem 'Montserrat', sans-serif;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: color .2s, border-color .2s;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--neon); border-bottom-color: var(--neon); }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 16px 0 6px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      font: 400 0.95rem 'Montserrat', sans-serif;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 209, 193, 0.18);
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .row label { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 400; }
+    .row a, .terms a { color: var(--accent); text-decoration: none; }
+    .row a:hover, .terms a:hover { text-decoration: underline; }
+    .terms { margin-top: 16px; }
+    input[type="checkbox"] { accent-color: var(--accent); }
+
+    button.submit {
+      width: 100%;
+      margin-top: 24px;
+      background: var(--accent);
+      color: #04201e;
+      border: none;
+      border-radius: 8px;
+      font: 700 0.95rem 'Montserrat', sans-serif;
+      padding: 13px;
+      cursor: pointer;
+      transition: background .2s, box-shadow .2s;
+    }
+    button.submit:hover { background: var(--neon); box-shadow: 0 0 18px rgba(57, 245, 224, 0.45); }
+
+    .msg { min-height: 1.2em; margin-top: 14px; font-size: 0.8rem; text-align: center; }
+    .msg.error { color: var(--error); }
+    .msg.ok { color: var(--neon); }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <div class="brand">
+      <h1>PC <span>HARD</span></h1>
+      <p>Reanimamos tu equipo</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" data-target="login" role="tab">Iniciá sesión</button>
+      <button class="tab" data-target="registro" role="tab">Registrate</button>
+    </div>
+
+    <!-- ===== INICIAR SESIÓN ===== -->
+    <!-- Cuando tengas tu servidor, reemplazá action="#" por la URL (ej: /login.php) -->
+    <form id="form-login" action="#" method="post">
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" name="email" autocomplete="email" required>
+
+      <label for="login-pass">Contraseña</label>
+      <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
+
+      <div class="row">
+        <label><input type="checkbox" name="recordar"> Recordarme</label>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit" class="submit">Ingresar</button>
+      <p class="msg" role="status"></p>
+    </form>
+
+    <!-- ===== REGISTRO ===== -->
+    <!-- Cuando tengas tu servidor, reemplazá action="#" por la URL (ej: /registro.php) -->
+    <form id="form-registro" action="#" method="post" hidden>
+      <label for="reg-nombre">Nombre y apellido</label>
+      <input type="text" id="reg-nombre" name="nombre" autocomplete="name" required>
+
+      <label for="reg-email">Email</label>
+      <input type="email" id="reg-email" name="email" autocomplete="email" required>
+
+      <label for="reg-tel">WhatsApp / Teléfono (opcional)</label>
+      <input type="tel" id="reg-tel" name="telefono" autocomplete="tel">
+
+      <label for="reg-pass">Contraseña (mínimo 8 caracteres)</label>
+      <input type="password" id="reg-pass" name="password" minlength="8" autocomplete="new-password" required>
+
+      <label for="reg-pass2">Repetir contraseña</label>
+      <input type="password" id="reg-pass2" name="password2" minlength="8" autocomplete="new-password" required>
+
+      <div class="terms row">
+        <label><input type="checkbox" name="terminos" required> Acepto los <a href="#">términos y condiciones</a></label>
+      </div>
+
+      <button type="submit" class="submit">Crear cuenta</button>
+      <p class="msg" role="status"></p>
+    </form>
+  </main>
+
+  <script>
+    var tabs = document.querySelectorAll('.tab');
+    var panels = {
+      login: document.getElementById('form-login'),
+      registro: document.getElementById('form-registro')
+    };
+
+    // Muestra la pestaña pedida (login o registro)
+    function show(name) {
+      if (!panels[name]) name = 'login';
+      for (var key in panels) panels[key].hidden = (key !== name);
+      tabs.forEach(function (t) {
+        var on = t.dataset.target === name;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on);
+      });
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + t.dataset.target);
+        show(t.dataset.target);
+      });
+    });
+    window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+    show(location.hash.slice(1)); // acceso.html#registro abre Registrate
+
+    // Validación básica
+    document.querySelectorAll('form').forEach(function (f) {
+      f.addEventListener('submit', function (e) {
+        var msg = f.querySelector('.msg');
+        msg.className = 'msg';
+        msg.textContent = '';
+
+        if (f.id === 'form-registro' &&
+            f.elements.password.value !== f.elements.password2.value) {
+          e.preventDefault();
+          msg.className = 'msg error';
+          msg.textContent = 'Las contraseñas no coinciden.';
+          return;
+        }
+
+        // Mientras action="#" no se envía nada: es solo una prueba visual
+        if (f.getAttribute('action') === '#') {
+          e.preventDefault();
+          msg.className = 'msg ok';
+          msg.textContent = 'Formulario OK. Falta conectarlo a tu servidor.';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
